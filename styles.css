@@ -1,0 +1,89 @@
+/* تنظیمات کلی */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* حالت روز */
+body.day {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* حالت شب */
+body.night {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+/* هدر */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#theme-toggle {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+#theme-toggle:hover {
+    background-color: #0056b3;
+}
+
+/* کارت */
+.card {
+    width: 200px; /* عرض پیش‌فرض */
+    height: 300px; /* ارتفاع پیش‌فرض */
+    background-color: #fff;
+    border-radius: 10px; /* گردی لبه‌ها */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative; /* برای تغییر موقعیت */
+    margin: 0 auto; /* وسط‌چین کردن */
+    transition: all 0.3s;
+}
+
+/* تصویر کارت */
+.card-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* دکمه شیشه‌ای مات */
+.glass-button {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.glass-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* حالت شب برای کارت */
+body.night .card {
+    background-color: #333;
+}
+
+body.night .glass-button {
+    background: rgba(255, 255, 255, 0.1);
+}
