@@ -1,1 +1,107 @@
-index.html
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#2A3A5A">
+  <title>کارت‌های شبکه‌های اجتماعی</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="https://imagedelivery.net/your-account-hash/icon-192x192/public">
+  <link rel="icon" href="https://imagedelivery.net/your-account-hash/icon-192x192/public">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="background-particles" width="auto" height="auto"></canvas>
+  <div class="top-bar">
+    <button onclick="toggleTheme()" id="theme-button">🌙</button>
+    <button onclick="showFeedback()">نظردهی</button>
+  </div>
+  <div class="header-container">
+    <div class="brand-intro">
+      <canvas class="brand-particles"></canvas>
+      <h2>معرفی برند</h2>
+      <p>این سایت مجموعه‌ای از لینک‌های شبکه‌های اجتماعی شماست. با کلیک روی دکمه‌های ورود به سایت، می‌تونید به صفحه مورد نظرتون برید و از خدمات ما استفاده کنید!</p>
+    </div>
+  </div>
+  <div class="grid-container">
+    <div class="card snapp" draggable="true">
+      <canvas class="particle-canvas"></canvas>
+      <div class="info">
+        <img src="https://raw.githubusercontent.com/mpcirancom/server/refs/heads/main/icon/Snapp.png" alt="واتساپ" style="border-radius: 20%;">
+        <h2>اسنپ</h2>
+        <p>لینک: snapp.ir</p>
+        <button class="enter-button" onclick="window.open('https://telegram.org', '_blank')">ورود به سایت</button>
+        <button class="enter-button" onclick="window.open('https://snapp.ir', '_blank')">ورود به سایت</button>
+      </div>
+    </div>
+    <div class="card telegram" draggable="true">
+      <canvas class="particle-canvas"></canvas>
+      <div class="info">
+        <img src="https://raw.githubusercontent.com/mpcirancom/server/refs/heads/main/icon/Instagram.png" alt="تلگرام" style="border-radius: 20%;">
+        <p>تلگرام: telegram.org</p>
+        <button class="enter-button" onclick="window.open('https://telegram.org', '_blank')">ورود به سایت</button>
+      </div>
+    </div>
+    <div class="card instagram" draggable="true">
+      <canvas class="particle-canvas"></canvas>
+      <div class="info">
+        <img src="https://raw.githubusercontent.com/mpcirancom/server/refs/heads/main/icon/Telegram.png" alt="اینستاگرام" style="border-radius: 20%;">
+        <p>اینستاگرام: instagram.com</p>
+        <button class="enter-button" onclick="window.open('https://instagram.com', '_blank')">ورود به سایت</button>
+      </div>
+    </div>
+    <div class="card whatsapp" draggable="true">
+      <canvas class="particle-canvas"></canvas>
+      <div class="info">
+        <img src="https://raw.githubusercontent.com/mpcirancom/server/refs/heads/main/icon/Whatsapp.png" alt="واتساپ" style="border-radius: 20%;">
+        <p>واتساپ: whatsapp.com</p>
+        <button class="enter-button" onclick="window.open('https://whatsapp.com', '_blank')">ورود به سایت</button>
+      </div>
+    </div>
+    <div class="card twitter" draggable="true">
+      <canvas class="particle-canvas"></canvas>
+      <div class="info">
+        <img src="https://raw.githubusercontent.com/mpcirancom/server/refs/heads/main/icon/Snapp.png" alt="توییتر" style="border-radius: 20%;">
+        <p>توییتر: twitter.com</p>
+        <button class="enter-button" onclick="window.open('https://twitter.com', '_blank')">ورود به سایت</button>
+      </div>
+    </div>
+    <div class="card linkedin" draggable="true">
+      <canvas class="particle-canvas"></canvas>
+      <div class="info">
+        <img src="https://raw.githubusercontent.com/mpcirancom/server/refs/heads/main/icon/BaSalam.png" alt="لینکدین" style="border-radius: 20%;">
+        <p>لینکدین: linkedin.com</p>
+        <button class="enter-button" onclick="window.open('https://linkedin.com', '_blank')">ورود به سایت</button>
+      </div>
+    </div>
+    <div class="card facebook" draggable="true">
+      <canvas class="particle-canvas"></canvas>
+      <div class="info">
+        <img src="https://raw.githubusercontent.com/mpcirancom/server/refs/heads/main/icon/Torob.png" alt="فیسبوک" style="border-radius: 20%;">
+        <p>فیسبوک: facebook.com</p>
+        <button class="enter-button" onclick="window.open('https://facebook.com', '_blank')">ورود به سایت</button>
+      </div>
+    </div>
+    <div class="card youtube" draggable="true">
+      <canvas class="particle-canvas"></canvas>
+      <div class="info">
+        <img src="https://raw.githubusercontent.com/mpcirancom/server/refs/heads/main/icon/Technolife.png" alt="یوتیوب" style="border-radius: 20%;">
+        <p>یوتیوب: youtube.com</p>
+        <button class="enter-button" onclick="window.open('https://youtube.com', '_blank')">ورود به سایت</button>
+      </div>
+    </div>
+  </div>
+  <div class="feedback-card">
+    <button class="close-button" onclick="hideFeedback()">×</button>
+    <h2>نظردهی</h2>
+    <input type="text" id="name" placeholder="نام" required>
+    <input type="email" id="email" placeholder="ایمیل" required>
+    <textarea id="feedback" placeholder="نظر خود را بنویسید" required></textarea>
+    <button onclick="sendFeedback()">ارسال</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
