@@ -1,4 +1,5 @@
-server_url: https://sub.metalping.ir:2053/sub/TmF6aSwxNzQ4NDI1ODQzE_6yS4NXuV
-server_code: nazi
-server_url: https://sub.metalping.ir:2053/sub/Rmxva2ksMTc0ODQyNTg0MwQmJ2drq3Qn
-server_code: floki
+100|https://sub.metalping.ir:2053/sub/MTAwLDE3NDM2MTE0ODMKOH4psiQZu
+ARMAN|https://pro.metalping.ir:443/sub/QXJtYW4sMTc0MzYwMzU1NQ-6exs6gMIj
+ARMAN-1|https://sub.metalping.ir:2053/sub/QXJtYW4tMSwxNzQzNjExNDgzzNMv6M9S4n
+SHIREI|https://pro.metalping.ir:443/sub/U0hJUkksMTczNjM4NDIzOAbw4gznVYEs
+...
