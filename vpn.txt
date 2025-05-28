@@ -1,0 +1,4 @@
+server_url: https://sub.metalping.ir:2053/sub/TmF6aSwxNzQ4NDI1ODQzE_6yS4NXuV
+server_code: nazi
+server_url: https://sub.metalping.ir:2053/sub/Rmxva2ksMTc0ODQyNTg0MwQmJ2drq3Qn
+server_code: floki
